@@ -1,0 +1,46 @@
+<ion-grid class="daySelected" text-center>
+  <ion-row align-items-center>
+    <ion-col col-1 class="colBtnDaysWeek">
+      <button ion-button color="dark" clear class="btnDaysWeek" (click)="showThisDay()">Sá</button>
+    </ion-col>
+    <ion-col col-1 class="colBtnDaysWeek">
+      <button ion-button color="dark" clear class="btnDaysWeek" (click)="showThisDay()">Do</button>
+    </ion-col>
+    <ion-col col-1 class="colBtnDaysWeek">
+      <button ion-button color="dark" clear class="btnDaysWeek" (click)="showThisDay()">Lu</button>
+    </ion-col>
+    <ion-col col-1 class="colBtnDaysWeek">
+      <button ion-button color="dark" clear class="btnDaysWeek" (click)="showThisDay()">Ma</button>
+    </ion-col>
+    <ion-col col-1 class="colBtnDaysWeek">
+      <button ion-button color="dark" clear class="btnDaysWeek" (click)="showThisDay()">Mi</button>
+    </ion-col>
+    <ion-col col-1 class="colBtnDaysWeek">
+      <button ion-button color="dark" clear class="btnDaysWeek" (click)="showThisDay()">Ju</button>
+    </ion-col>
+    <ion-col col-1 class="colBtnDaysWeek">
+      <button ion-button color="dark" clear class="btnDaysWeek" (click)="showThisDay()">Vi</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-toolbar>
+  <ion-buttons start>
+    <button ion-button icon-only (click)="openMenu()">
+        <ion-icon name="options"></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-segment [(ngModel)]="relationship" color="primary">
+    <ion-segment-button value="public" (ionSelect)="selectedPublics()">
+      Público
+    </ion-segment-button>
+    <ion-segment-button value="private" (ionSelect)="selectedPrivates()">
+      Privado
+    </ion-segment-button>
+  </ion-segment>
+  <ion-buttons end>
+    <button ion-button icon-only (click)="openMenu()">
+        <ion-icon name="notifications"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>

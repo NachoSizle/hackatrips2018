@@ -1,10 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Agenda</ion-title>
-  </ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Agenda</ion-title>
+    </ion-navbar>
   
+    <toolbar-agenda></toolbar-agenda>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <h4 padding-left>Recomendaciones para hoy</h4>
+  <ion-slides>
+    <ion-slide>
+      <card-agenda></card-agenda>
+    </ion-slide>
+    <ion-slide>
+      <card-agenda></card-agenda>
+    </ion-slide>
+    <ion-slide>
+      <card-agenda></card-agenda>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
