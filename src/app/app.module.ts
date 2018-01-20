@@ -19,6 +19,7 @@ import { ToolbarAgendaComponent } from '../components/toolbar-agenda/toolbar-age
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AgmCoreModule } from '@agm/core';
+import { PoisProvider } from '../providers/pois/pois';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { AgmCoreModule } from '@agm/core';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PoisProvider
   ]
 })
 export class AppModule {}
