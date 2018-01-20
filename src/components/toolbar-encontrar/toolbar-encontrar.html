@@ -1,0 +1,28 @@
+<ion-toolbar>
+  <ion-buttons start>
+    <button ion-button icon-only (click)="openMenu()">
+        <ion-icon name="options"></ion-icon>
+    </button>
+  </ion-buttons>
+  <ion-searchbar [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+  <ion-buttons end>
+    <button ion-button icon-only (click)="openMenu()">
+        <ion-icon name="map"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-segment [(ngModel)]="relationship" color="primary">
+    <ion-segment-button value="restaurants" (ionSelect)="selectedRestaurants()">
+      Restaurantes
+    </ion-segment-button>
+    <ion-segment-button value="ptosInteres" (ionSelect)="selectedPoints()">
+      Puntos de Interés
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
