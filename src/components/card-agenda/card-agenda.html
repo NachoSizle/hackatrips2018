@@ -1,11 +1,12 @@
 <ion-card text-left class="card-background-page">
-  <img src="./assets/imgs/example.png">
-  <div class="card-title">Tagliatella</div>
-  <div class="card-subtitle">64 Listings</div>
+  <img src={{img}}>
+  <div class="card-title">{{nameRestaurant}}</div>
+  <div class="card-subtitle">{{numRes}} reseñas</div>
 
   <img class="img-avatar" src="./assets/imgs/marty.png">
+  <p class="imgAvatarLike">Le gusta</p>
 
-  <ion-item>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit..</p>
+  <ion-item text-wrap>
+    <p>{{dirRes}}</p>
   </ion-item>
 </ion-card>

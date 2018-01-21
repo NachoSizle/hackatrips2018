@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { ReservationConfirmPage} from '../reservation-confirm/reservation-confirm';
 /**
  * Generated class for the ProcesoReservaPage page.
  *
@@ -17,11 +17,29 @@ export class ProcesoReservaPage {
 
   numberPerson:number = 1;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public ldng: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProcesoReservaPage');
+  }
+
+  confirmRes() {
+    let loading = this.ldng.create({
+      content: 'Espere...'
+    });
+
+    loading.onDidDismiss(() => {
+      this.navCtrl.push(ReservationConfirmPage);
+    });
+  
+    loading.present();
+  
+    setTimeout(() => {
+      loading.dismiss();
+    }, 5000);
   }
 
   selectedMinus() {

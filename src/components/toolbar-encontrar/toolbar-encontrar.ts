@@ -7,9 +7,11 @@ import { Component, Input } from '@angular/core';
 export class ToolbarEncontrarComponent {
 
   @Input('mapMode') mapMode: boolean;
+  mapModeActive: any;
 
   constructor() {
     console.log('Hello ToolbarEncontrarComponent Component');
+    this.mapModeActive = "restaurant";
   }
 
   changeMode() {
@@ -18,11 +20,11 @@ export class ToolbarEncontrarComponent {
   }
 
   selectedRestaurants() {
-
+    this.mapModeActive = "restaurant";
   }
 
   selectedPoints() {
-
+    this.mapModeActive = "poi";
   }
 
 }

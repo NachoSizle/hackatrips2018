@@ -12,11 +12,19 @@ import { Component } from '@angular/core';
 })
 export class ToolbarAgendaComponent {
 
-  text: string;
+  relationship: any;
 
   constructor() {
     console.log('Hello ToolbarAgendaComponent Component');
-    this.text = 'Hello World';
+    this.relationship = "public";
+  }
+
+  selectedPrivates() {
+    this.relationship = "private";
+  }
+
+  selectedPublics() {
+    this.relationship = "public";
   }
 
   showThisDay() {

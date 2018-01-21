@@ -10,6 +10,7 @@ import { OfertasPage } from '../pages/ofertas/ofertas';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { ProcesoReservaPage } from '../pages/proceso-reserva/proceso-reserva';
 import { RestaurantInfoPage } from '../pages/restaurant-info/restaurant-info';
+import { ReservationConfirmPage } from '../pages/reservation-confirm/reservation-confirm';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { ToolbarEncontrarComponent } from '../components/toolbar-encontrar/toolbar-encontrar';
@@ -33,6 +34,7 @@ import { AgmCoreModule } from '@agm/core';
     EncontrarPage,
     ProcesoReservaPage,
     RestaurantInfoPage,
+    ReservationConfirmPage,
     ToolbarEncontrarComponent,
     ToolbarAgendaComponent,
     CardAgendaComponent,
@@ -60,6 +62,7 @@ import { AgmCoreModule } from '@agm/core';
     EncontrarPage,
     ProcesoReservaPage,
     RestaurantInfoPage,
+    ReservationConfirmPage,
     ToolbarEncontrarComponent,
     ToolbarAgendaComponent,
     CardAgendaComponent,

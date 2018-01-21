@@ -32,9 +32,18 @@ card-agenda {
             bottom: 20%;
             left: 7%;
         }
+
+        .imgAvatarLike {
+            position: absolute;
+            bottom: 25%;
+            left: 19%;
+            padding-left: 10px;
+            font-weight: bold;
+            color: #fff;
+        }
     }
 
-    .swiper-pagination-bullets {
-        top: 20px;
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: 10px;
     }
 }

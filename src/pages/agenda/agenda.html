@@ -11,15 +11,24 @@
 
 <ion-content>
   <h4 padding-left>Recomendaciones para hoy</h4>
-  <ion-slides>
+  <ion-slides [pager]="true">
     <ion-slide>
-      <card-agenda></card-agenda>
+      <card-agenda [imagen]="'./assets/imgs/example.png'"
+                   [nameRes]="'Tagliatella'"
+                   [numRes]="100"
+                   [dirRes]="'Paseo de la Castellana, 257, 28046 Madrid'"></card-agenda>
     </ion-slide>
     <ion-slide>
-      <card-agenda></card-agenda>
+      <card-agenda [imagen]="'./assets/imgs/example2.jpg'"
+                   [nameRes]="'Nicoletta'"
+                   [numRes]="60"
+                   [dirRes]="'Calle de Pico Balaitus, 11, 28035 Madrid'"></card-agenda>
     </ion-slide>
     <ion-slide>
-      <card-agenda></card-agenda>
+      <card-agenda [imagen]="'./assets/imgs/example3.jpg'"
+                   [nameRes]="'Pomodoro'"
+                   [numRes]="28"
+                   [dirRes]="'Calle de las Islas Cíes, 47, 28035 Madrid'"></card-agenda>
     </ion-slide>
   </ion-slides>
 </ion-content>

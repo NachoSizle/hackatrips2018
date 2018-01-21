@@ -17,11 +17,11 @@
 </ion-toolbar>
 
 <ion-toolbar>
-  <ion-segment [(ngModel)]="mapMode" color="primary">
-    <ion-segment-button value="true" (ionSelect)="selectedRestaurants()">
+  <ion-segment [(ngModel)]="mapModeActive" color="primary">
+    <ion-segment-button value="restaurant" (ionSelect)="selectedRestaurants()">
       Restaurantes
     </ion-segment-button>
-    <ion-segment-button value="false" (ionSelect)="selectedPoints()">
+    <ion-segment-button value="poi" (ionSelect)="selectedPoints()">
       Puntos de Interés
     </ion-segment-button>
   </ion-segment>
