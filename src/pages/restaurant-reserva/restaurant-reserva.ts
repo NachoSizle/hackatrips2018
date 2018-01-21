@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { RestaurantReservaPage } from '../../pages/restaurant-reserva/restaurant-reserva';
 /**
- * Generated class for the ReservasPage page.
+ * Generated class for the RestaurantReservaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,20 +9,16 @@ import { RestaurantReservaPage } from '../../pages/restaurant-reserva/restaurant
 
 @IonicPage()
 @Component({
-  selector: 'page-reservas',
-  templateUrl: 'reservas.html',
+  selector: 'page-restaurant-reserva',
+  templateUrl: 'restaurant-reserva.html',
 })
-export class ReservasPage {
+export class RestaurantReservaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ReservasPage');
-  }
-
-  navigateTo() {
-    this.navCtrl.push(RestaurantReservaPage);
+    console.log('ionViewDidLoad RestaurantReservaPage');
   }
 
 }

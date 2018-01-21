@@ -11,6 +11,7 @@ import { ReservasPage } from '../pages/reservas/reservas';
 import { ProcesoReservaPage } from '../pages/proceso-reserva/proceso-reserva';
 import { RestaurantInfoPage } from '../pages/restaurant-info/restaurant-info';
 import { ReservationConfirmPage } from '../pages/reservation-confirm/reservation-confirm';
+import { RestaurantReservaPage } from '../pages/restaurant-reserva/restaurant-reserva';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { ToolbarEncontrarComponent } from '../components/toolbar-encontrar/toolbar-encontrar';
@@ -18,6 +19,7 @@ import { EncontrarMapComponent } from '../components/encontrar-map/encontrar-map
 import { EncontrarListaComponent } from '../components/encontrar-lista/encontrar-lista';
 import { CardAgendaComponent } from '../components/card-agenda/card-agenda';
 import { CardRestaurantComponent } from '../components/card-restaurant/card-restaurant';
+import { CardRestaurantReservaComponent } from '../components/card-restaurant-reserva/card-restaurant-reserva';
 import { ToolbarAgendaComponent } from '../components/toolbar-agenda/toolbar-agenda';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -41,7 +43,9 @@ import { AgmCoreModule } from '@agm/core';
     CardRestaurantComponent,
     EncontrarMapComponent,
     EncontrarListaComponent,
-    TabsPage
+    TabsPage,
+    RestaurantReservaPage,
+    CardRestaurantReservaComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,9 @@ import { AgmCoreModule } from '@agm/core';
     CardRestaurantComponent,
     EncontrarMapComponent,
     EncontrarListaComponent,
-    TabsPage
+    TabsPage,
+    RestaurantReservaPage,
+    CardRestaurantReservaComponent
   ],
   providers: [
     StatusBar,
