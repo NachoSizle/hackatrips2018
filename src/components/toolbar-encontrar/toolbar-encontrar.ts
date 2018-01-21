@@ -1,22 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-/**
- * Generated class for the ToolbarEncontrarComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Component({
   selector: 'toolbar-encontrar',
   templateUrl: 'toolbar-encontrar.html'
 })
 export class ToolbarEncontrarComponent {
 
-  text: string;
+  @Input('mapMode') mapMode: boolean;
 
   constructor() {
     console.log('Hello ToolbarEncontrarComponent Component');
-    this.text = 'Hello World';
+  }
+
+  changeMode() {
+    console.log(this.mapMode);
+    this.mapMode = !this.mapMode;
+  }
+
+  selectedRestaurants() {
+
+  }
+
+  selectedPoints() {
+
   }
 
 }

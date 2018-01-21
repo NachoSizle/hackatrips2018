@@ -9,11 +9,14 @@ import { EncontrarPage } from '../pages/encontrar/encontrar';
 import { OfertasPage } from '../pages/ofertas/ofertas';
 import { ReservasPage } from '../pages/reservas/reservas';
 import { ProcesoReservaPage } from '../pages/proceso-reserva/proceso-reserva';
+import { RestaurantInfoPage } from '../pages/restaurant-info/restaurant-info';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { ToolbarEncontrarComponent } from '../components/toolbar-encontrar/toolbar-encontrar';
 import { EncontrarMapComponent } from '../components/encontrar-map/encontrar-map';
+import { EncontrarListaComponent } from '../components/encontrar-lista/encontrar-lista';
 import { CardAgendaComponent } from '../components/card-agenda/card-agenda';
+import { CardRestaurantComponent } from '../components/card-restaurant/card-restaurant';
 import { ToolbarAgendaComponent } from '../components/toolbar-agenda/toolbar-agenda';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,10 +32,13 @@ import { AgmCoreModule } from '@agm/core';
     ReservasPage,
     EncontrarPage,
     ProcesoReservaPage,
+    RestaurantInfoPage,
     ToolbarEncontrarComponent,
     ToolbarAgendaComponent,
     CardAgendaComponent,
+    CardRestaurantComponent,
     EncontrarMapComponent,
+    EncontrarListaComponent,
     TabsPage
   ],
   imports: [
@@ -40,7 +46,9 @@ import { AgmCoreModule } from '@agm/core';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD5t4KvIZWbRWy8e9j71lQf3FIkuP8-aC8'
     }),
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      backButtonText: ''
+     })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,10 +59,13 @@ import { AgmCoreModule } from '@agm/core';
     ReservasPage,
     EncontrarPage,
     ProcesoReservaPage,
+    RestaurantInfoPage,
     ToolbarEncontrarComponent,
     ToolbarAgendaComponent,
     CardAgendaComponent,
+    CardRestaurantComponent,
     EncontrarMapComponent,
+    EncontrarListaComponent,
     TabsPage
   ],
   providers: [

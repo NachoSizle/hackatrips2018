@@ -6,9 +6,10 @@
 
     <ion-title>Encontrar</ion-title>
   </ion-navbar>
-  <toolbar-encontrar></toolbar-encontrar>
+  <toolbar-encontrar [mapMode]="mapMode"></toolbar-encontrar>
 </ion-header>
 
 <ion-content padding>
-  <encontrar-map></encontrar-map>
+  <encontrar-map [hidden]="mapMode"></encontrar-map>
+  <encontrar-lista [hidden]="!mapMode"></encontrar-lista>
 </ion-content>

@@ -1,3 +1,13 @@
-<agm-map [latitude]="lat" [longitude]="long">
-    <agm-marker [latitude]="lat" [longitude]="long"></agm-marker>
+<agm-map [zoom]="zoom" 
+         [latitude]="lat" 
+         [longitude]="long">
+    <agm-marker [latitude]="lat" 
+                [longitude]="long" 
+                (markerClick)="showMarket()">
+                <!--
+                <agm-info-window>
+                    Ifema
+                </agm-info-window>
+                -->
+    </agm-marker>
 </agm-map>
