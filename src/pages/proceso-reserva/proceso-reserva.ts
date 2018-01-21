@@ -32,6 +32,7 @@ export class ProcesoReservaPage {
     });
 
     loading.onDidDismiss(() => {
+      this.navCtrl.pop();
       this.navCtrl.push(ReservationConfirmPage);
     });
   
@@ -39,7 +40,7 @@ export class ProcesoReservaPage {
   
     setTimeout(() => {
       loading.dismiss();
-    }, 5000);
+    }, 3000);
   }
 
   selectedMinus() {

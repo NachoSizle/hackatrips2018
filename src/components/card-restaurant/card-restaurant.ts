@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProcesoReservaPage } from '../../pages/proceso-reserva/proceso-reserva';
+import { ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'card-restaurant',
@@ -8,11 +9,18 @@ import { ProcesoReservaPage } from '../../pages/proceso-reserva/proceso-reserva'
 })
 export class CardRestaurantComponent {
 
-  constructor(public navCtrl: NavController) {
+  resMode: boolean = true;
+
+  constructor(public navCtrl: NavController,
+              public modalCtrl: ModalController) {
     console.log('Hello CardRestaurantComponent Component');
   }
 
   goToReservation() {
-    this.navCtrl.push(ProcesoReservaPage);
+    let modal = this.modalCtrl.create(ProcesoReservaPage);
+    modal.onDidDismiss(() => {
+      this.resMode = false;
+    });
+    modal.present();
   }
 }

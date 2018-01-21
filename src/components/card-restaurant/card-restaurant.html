@@ -12,8 +12,11 @@
           </button>
       </ion-col>
       <ion-col text-center>
-          <button ion-button round (click)="goToReservation()" class="btnRound">
+          <button *ngIf="resMode" ion-button round (click)="goToReservation()" class="btnRound">
             Reservar
+          </button>
+          <button *ngIf="!resMode" ion-button round (click)="goToRestaurant()" class="btnRound">
+            Ir
           </button>
       </ion-col>
   </ion-row>

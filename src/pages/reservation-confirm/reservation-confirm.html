@@ -5,9 +5,14 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-avatar item-start>
+  <ion-item class="itemCheckTick">
+    <ion-avatar item-center>
       <img src="./assets/imgs/tick.png">
     </ion-avatar>
+    <span class="spanCompletedRes">Has completado tu reserva</span>
   </ion-item>
+  <p class="parCenter">Puedes revisarla en el apartado "Reservas"</p>
+  <ion-row text-center>
+    <button ion-button round class="btnConfirm" (click)="dismiss()">Confirmar</button>
+  </ion-row>
 </ion-content>
