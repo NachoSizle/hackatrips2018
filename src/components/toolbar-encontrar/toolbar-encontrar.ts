@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { Events } from 'ionic-angular';
 
 @Component({
   selector: 'toolbar-encontrar',
@@ -6,25 +7,28 @@ import { Component, Input } from '@angular/core';
 })
 export class ToolbarEncontrarComponent {
 
-  @Input('mapMode') mapMode: boolean;
+  mapMode: boolean = false;
   mapModeActive: any;
+  mapModePoi: boolean = false;
 
-  constructor() {
+  constructor(public events: Events) {
     console.log('Hello ToolbarEncontrarComponent Component');
+    console.log(this.mapMode);
     this.mapModeActive = "restaurant";
   }
 
   changeMode() {
-    console.log(this.mapMode);
     this.mapMode = !this.mapMode;
+    this.events.publish('mapMode:changed', this.mapMode);
   }
 
   selectedRestaurants() {
-    this.mapModeActive = "restaurant";
+    this.mapModePoi = false;
+    this.events.publish('mapPoi:changed', this.mapModePoi);
   }
 
   selectedPoints() {
-    this.mapModeActive = "poi";
+    this.mapModePoi = true;
+    this.events.publish('mapPoi:changed', this.mapModePoi);
   }
-
 }

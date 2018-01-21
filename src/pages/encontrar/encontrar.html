@@ -3,13 +3,12 @@
     <button ion-button icon-only menuToggle>
     <ion-icon name="menu"></ion-icon>
     </button>
-
     <ion-title>Encontrar</ion-title>
   </ion-navbar>
-  <toolbar-encontrar [mapMode]="mapMode"></toolbar-encontrar>
+  <toolbar-encontrar></toolbar-encontrar>
 </ion-header>
 
-<ion-content padding>
-  <encontrar-map [hidden]="!mapMode"></encontrar-map>
-  <encontrar-lista padding-top [hidden]="!mapMode"></encontrar-lista>
+<ion-content>
+  <encontrar-map [hidden]="mapMode"></encontrar-map>
+  <encontrar-lista [hidden]="!mapMode"></encontrar-lista>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Events } from 'ionic-angular';
 import { RestaurantInfoPage } from '../../pages/restaurant-info/restaurant-info';
 
 @Component({
@@ -7,10 +7,14 @@ import { RestaurantInfoPage } from '../../pages/restaurant-info/restaurant-info'
   templateUrl: 'encontrar-lista.html'
 })
 export class EncontrarListaComponent {
+  mapPoi: boolean;
 
-
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,
+              public events: Events) {
     console.log('Hello EncontrarListaComponent Component');
+    events.subscribe('mapPoi:changed', (mode) => {
+      this.mapPoi = mode;
+    });
   }
 
   showMarket(){

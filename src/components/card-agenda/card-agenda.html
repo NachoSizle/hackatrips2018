@@ -1,9 +1,9 @@
-<ion-card text-left class="card-background-page">
+<ion-card text-left class="card-background-page" (click)="goToRestaurantInfo()">
   <img src={{img}}>
   <div class="card-title">{{nameRestaurant}}</div>
   <div class="card-subtitle">{{numRes}} reseñas</div>
 
-  <img class="img-avatar" src="./assets/imgs/marty.png">
+  <img class="img-avatar" src={{imgProfile}}>
   <p class="imgAvatarLike">Le gusta</p>
 
   <ion-item text-wrap>

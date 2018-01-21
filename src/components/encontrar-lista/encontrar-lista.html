@@ -1,5 +1,43 @@
-<ion-list>
-  <button ion-item (click)="showMarket()">
-    Tagliatella
-  </button>  
+<ion-list *ngIf="!mapPoi">
+  <ion-list-header>
+    A menos de 500 m
+  </ion-list-header>
+  <ion-item (click)="showMarket()">
+    <ion-avatar item-start>
+      <img src="http://www.algecirasnoticias.com/dosmaresmagazine/wp-content/uploads/2017/10/tagliatella.jpeg">
+    </ion-avatar>
+    <h2>Tagliatella</h2>
+    <p>Italian</p>
+  </ion-item>
+  <ion-list-header>
+    A mas de 1 Km
+  </ion-list-header>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="https://www.trabajarmadrid.com/wp-content/uploads/job-manager-uploads/job_image/2017/12/la_nicoletta-madrid.jpg">
+    </ion-avatar>
+    <h2>Nicoletta</h2>
+    <p>Italian</p>
+  </ion-item>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="https://www.alimarket.es/media/images/2016/detalle_art/205784/156125_preview.jpg">
+    </ion-avatar>
+    <h2>Pomodoro</h2>
+    <p>Italian</p>
+  </ion-item>
+</ion-list>
+<ion-list *ngIf="mapPoi">
+  <ion-list-header>
+    A menos de 500 m
+  </ion-list-header>
+  <ion-item (click)="showMarket()">
+    <h2>Plaza de Castilla</h2>
+  </ion-item>
+  <ion-item>
+    <h2>Torres Kio</h2>
+  </ion-item>
+  <ion-item>
+    <h2>Parque cuarto depósito</h2>
+  </ion-item>
 </ion-list>

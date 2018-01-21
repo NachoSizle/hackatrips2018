@@ -1,5 +1,5 @@
-import { Component, Output } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -8,11 +8,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EncontrarPage {
 
-  @Output('mapMode') mapMode: boolean;
+  mapMode: boolean;
+  mapModePoi: boolean;
 
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
-              this.mapMode = true;
+              public navParams: NavParams,
+              public events: Events) {
+    events.subscribe('mapMode:changed', (mode) => {
+      this.mapMode = mode;
+    });
   }
 
   ionViewDidLoad() {

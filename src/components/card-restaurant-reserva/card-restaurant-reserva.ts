@@ -12,11 +12,7 @@ import { Component } from '@angular/core';
 })
 export class CardRestaurantReservaComponent {
 
-  text: string;
-
   constructor() {
     console.log('Hello CardRestaurantReservaComponent Component');
-    this.text = 'Hello World';
   }
-
 }

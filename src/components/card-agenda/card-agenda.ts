@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ProcesoReservaPage } from '../../pages/proceso-reserva/proceso-reserva';
+import { RestaurantInfoPage } from '../../pages/restaurant-info/restaurant-info';
 
 @Component({
   selector: 'card-agenda',
@@ -12,13 +12,14 @@ export class CardAgendaComponent {
   @Input('nameRes') nameRestaurant: any;
   @Input('numRes') numRes: number;
   @Input('dirRes') dirRes: any;
+  @Input('imgProfile') imgProfile: any;
 
   constructor(public navCtrl: NavController) {
     console.log('Hello CardAgendaComponent Component');
   }
 
-  goToReservation() {
-    this.navCtrl.push(ProcesoReservaPage);
+  goToRestaurantInfo() {
+    this.navCtrl.push(RestaurantInfoPage);
   }
 
 }

@@ -2,7 +2,7 @@
   <img src="./assets/imgs/example.png">
 
   <ion-item text-wrap>
-      <p>Paseo de la Castellana, 257, 28046 Madrid</p>
+      <p>Calle Capitán Haya, 53, 28020 Madrid</p>
   </ion-item>
 
   <ion-row>
@@ -15,9 +15,9 @@
           <button *ngIf="resMode" ion-button round (click)="goToReservation()" class="btnRound">
             Reservar
           </button>
-          <button *ngIf="!resMode" ion-button round (click)="goToRestaurant()" class="btnRound">
+          <a *ngIf="!resMode" ion-button round href="https://maps.google.com/maps?ll=40.463357,-3.691769&amp;z=18&amp;t=m&amp;hl=es-ES&amp;gl=US&amp;mapclient=apiv3&amp;cid=2685489608181249005" class="btnRound">
             Ir
-          </button>
+          </a>
       </ion-col>
   </ion-row>
 </ion-card>

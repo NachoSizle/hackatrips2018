@@ -1,13 +1,13 @@
 <agm-map [zoom]="zoom" 
          [latitude]="lat" 
          [longitude]="long">
-    <agm-marker [latitude]="lat" 
-                [longitude]="long" 
-                (markerClick)="showMarket()">
-                <!--
-                <agm-info-window>
-                    Ifema
-                </agm-info-window>
-                -->
-    </agm-marker>
+    <agm-marker-cluster>
+        <agm-marker *ngFor="let marker of markers"
+            [latitude]="marker.lat"
+            [longitude]="marker.long"
+            (markerClick)="showMarket()"
+            [iconUrl]="marker.iconType">
+        </agm-marker>
+    </agm-marker-cluster>
 </agm-map>
+

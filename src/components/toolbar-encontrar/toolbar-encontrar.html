@@ -11,7 +11,8 @@
   </ion-searchbar>
   <ion-buttons end>
     <button ion-button icon-only (click)="changeMode()">
-        <ion-icon name="map"></ion-icon>
+      <ion-icon *ngIf="mapMode" name="map"></ion-icon>
+      <ion-icon *ngIf="!mapMode" name="menu"></ion-icon>
     </button>
   </ion-buttons>
 </ion-toolbar>
@@ -22,7 +23,7 @@
       Restaurantes
     </ion-segment-button>
     <ion-segment-button value="poi" (ionSelect)="selectedPoints()">
-      Puntos de Interés
+      POI
     </ion-segment-button>
   </ion-segment>
 </ion-toolbar>

@@ -25,6 +25,9 @@ import { ToolbarAgendaComponent } from '../components/toolbar-agenda/toolbar-age
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsAPIWrapper } from '@agm/core';
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer'
+
 
 @NgModule({
   declarations: [
@@ -52,6 +55,7 @@ import { AgmCoreModule } from '@agm/core';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD5t4KvIZWbRWy8e9j71lQf3FIkuP8-aC8'
     }),
+    AgmJsMarkerClustererModule,
     IonicModule.forRoot(MyApp, {
       backButtonText: ''
      })
@@ -80,6 +84,7 @@ import { AgmCoreModule } from '@agm/core';
   providers: [
     StatusBar,
     SplashScreen,
+    GoogleMapsAPIWrapper,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
