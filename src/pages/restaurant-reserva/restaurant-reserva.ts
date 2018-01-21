@@ -14,7 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class RestaurantReservaPage {
 
+  restaurantName: string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.restaurantName = 'Tagliatella';
   }
 
   ionViewDidLoad() {
